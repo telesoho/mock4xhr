@@ -1,5 +1,5 @@
 {
-  "name": "xhr-mock",
+  "name": "mock4xhr",
   "version": "1.9.1",
   "description": "Utility for mocking XMLHttpRequests in the browser.",
   "keywords": [
@@ -10,11 +10,11 @@
     "request",
     "ajax",
     "browser",
-    "xmlhttprequest",
+    "XMLHttpRequest",
     "jquery",
     "superagent"
   ],
-  "repository": "jameslnewell/xhr-mock",
+  "repository": "telesoho/mock4xhr",
   "dependencies": {
     "global": "^4.3.0",
     "url-parse": "^1.1.7"

@@ -1,6 +1,4 @@
-# xhr-mock
-
-[![Build Status](https://travis-ci.org/jameslnewell/xhr-mock.svg?branch=master)](https://travis-ci.org/jameslnewell/xhr-mock)
+# mock4xhr
 
 Utility for mocking XMLHttpRequests in the browser.
 
@@ -10,16 +8,16 @@ Useful for unit testing and doesn't require you to inject a mocked object into y
 
 ### Browserify
 
-    npm install --save xhr-mock
+    npm install --save mock4xhr
 
 ### Component
 
-    component install jameslnewell/xhr-mock
+    component install jameslnewell/mock4xhr
 
 ## Usage
 
 ```javascript
-var mock = require('xhr-mock');
+var mock = require('mock4xhr');
 
 //replace the real XHR object with the mock XHR object
 mock.setup();
@@ -56,7 +54,7 @@ xhr.onreadystatechange = function() {
 
 ## Examples
 
-Examples of using `xhr-mock` with various frameworks:
+Examples of using `mock4xhr` with various frameworks:
 
 - [Axios](example/src/axios/index.js)
 - [Superagent](example/src/superagent/index.js)
@@ -65,7 +63,7 @@ Examples of using `xhr-mock` with various frameworks:
 
 ## API
 
-### xhr-mock
+### mock4xhr
 
 #### .setup()
 
@@ -188,27 +186,6 @@ Set whether the response will trigger a time out. `timeout` defaults to the valu
 #### .progress(loaded : number, total : number, lengthComputable : bool)
 
 Trigger progress event. Pass in loaded size, total size and if event is lengthComputable.
-
-## Change log
-
-### 1.9.1
-
-- fixed [#30](https://github.com/jameslnewell/xhr-mock/issues/30)
-
-### 1.9.0
-
-- added `Response.statusText()` for setting the status text
-
-### 1.8.0
-
-- added support for regexes instead of URLs in all the mock methods
-- added the `.query()` method to the request object
-- added the `.reset()` method to `mock` and `MockXMLHttpRequest`
-- added `withCredentials` to the mocked XHR objects (used by some libraries to test for "real" XHR support)
-
-### 1.7.0
-
-- added support for `addEventListener` ([#15](https://github.com/jameslnewell/xhr-mock/pull/15))
 
 ## ToDo
 
