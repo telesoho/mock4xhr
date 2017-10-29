@@ -1,5 +1,5 @@
 {
-  "name": "xhr-mock",
+  "name": "mock4xhr",
   "version": "2.0.0-preview.8",
   "description": "Utility for mocking XMLHttpRequest.",
   "keywords": [
@@ -10,11 +10,14 @@
     "request",
     "ajax",
     "browser",
-    "xmlhttprequest",
+    "XMLHttpRequest",
     "jquery",
     "superagent"
   ],
-  "repository": "jameslnewell/xhr-mock",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telesoho/mock4xhr.git"
+  },  
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -42,9 +45,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect --debug-brk ./node_modules/.bin/jest --runInBand --env jest-environment-node-debug",
-    "ci": "yarn run clean && yarn run lint && yarn run build && yarn run test",
-    "precommit": "lint-staged",
-    "prepublish": "yarn run ci"
+    "ci": "yarn run clean && yarn run lint && yarn run build && yarn run test"
   },
   "lint-staged": {
     "*.ts": [

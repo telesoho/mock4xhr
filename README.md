@@ -1,15 +1,11 @@
-# xhr-mock
-
-[![npm (tag)](https://img.shields.io/npm/v/xhr-mock/next.svg)]()
-[![Build Status](https://travis-ci.org/jameslnewell/xhr-mock.svg?branch=master)](https://travis-ci.org/jameslnewell/xhr-mock)
-[![npm](https://img.shields.io/npm/dm/localeval.svg)]()
+# mock4xhr
 
 Utility for mocking XMLHttpRequest.
 
 
 ## Installation
 
-    npm install --save-dev xhr-mock
+    npm install --save-dev mock4xhr
 
 ## Usage
 
@@ -39,7 +35,7 @@ export default function(data) {
 
 `./createUser.test.js`
 ```js
-import mock from 'xhr-mock';
+import mock from 'mock4xhr';
 import createUser from './createUser';
 
 describe('createUser()', () => {
@@ -89,7 +85,7 @@ describe('createUser()', () => {
 
 ## Examples
 
-Examples of using `xhr-mock` with various frameworks:
+Examples of using `mock4xhr` with various frameworks:
 
 - [Axios](example/src/axios/index.js)
 - [Superagent](example/src/superagent/index.js)
@@ -212,10 +208,10 @@ Set the response body.
 
 #### Upload progress
 
-Set the `Content-Length` header and send a body. `xhr-mock` will emit `ProgressEvent`s.
+Set the `Content-Length` header and send a body. `mock4xhr` will emit `ProgressEvent`s.
 
 ```js
-import mock from 'xhr-mock';
+import mock from 'mock4xhr';
 
 mock.setup();
 mock.get('/', {});
@@ -234,10 +230,10 @@ xhr.send('Hello World!');
 
 #### Download progress
 
-Set the `Content-Length` header and send a body. `xhr-mock` will emit `ProgressEvent`s.
+Set the `Content-Length` header and send a body. `mock4xhr` will emit `ProgressEvent`s.
 
 ```js
-import mock from 'xhr-mock';
+import mock from 'mock4xhr';
 
 mock.setup();
 mock.get('/', {
@@ -262,7 +258,7 @@ xhr.send();
 Return a `Promise` that never resolves or rejects.
 
 ```js
-import mock from 'xhr-mock';
+import mock from 'mock4xhr';
 
 mock.post('/', (req, res) => {
   return new Promise(() => {});
@@ -285,7 +281,7 @@ xhr.send();
 Return a `Promise` that rejects.
 
 ```js
-import mock from 'xhr-mock';
+import mock from 'mock4xhr';
 
 mock.post('/', (req, res) => {
   return new Promise.reject();
@@ -305,7 +301,7 @@ xhr.send();
 If you want to mock some requests but not all of them, you can proxy unhandled requests to a real server.
 
 ```js
-import mock from 'xhr-mock';
+import mock from 'mock4xhr';
 
 // mock specific requests
 mock.post('/', (req, res) => {
