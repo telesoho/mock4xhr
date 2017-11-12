@@ -1,12 +1,8 @@
 {
   "name": "mock4xhr",
-<<<<<<< HEAD
-  "version": "2.0.0-preview.8",
-  "description": "Utility for mocking XMLHttpRequest.",
-=======
+
   "version": "1.9.1",
   "description": "Utility for mocking XMLHttpRequests in the browser.",
->>>>>>> v1
   "keywords": [
     "mock",
     "xhr",
@@ -19,19 +15,7 @@
     "jquery",
     "superagent"
   ],
-<<<<<<< HEAD
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/telesoho/mock4xhr.git"
-  },  
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "files": [
-    "lib"
-  ],
-=======
   "repository": "telesoho/mock4xhr",
->>>>>>> v1
   "dependencies": {
     "global": "^4.3.0",
     "url": "^0.11.0"
