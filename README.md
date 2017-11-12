@@ -1,13 +1,20 @@
 # mock4xhr
+<<<<<<< HEAD
 
 Utility for mocking XMLHttpRequest.
+=======
+>>>>>>> v1
 
 
 ## Installation
 
     npm install --save-dev mock4xhr
 
+<<<<<<< HEAD
 ## Usage
+=======
+    npm install --save mock4xhr
+>>>>>>> v1
 
 `./createUser.js`
 ```js
@@ -31,14 +38,23 @@ export default function(data) {
   });
 }
 
+<<<<<<< HEAD
 ```
+=======
+    component install jameslnewell/mock4xhr
+>>>>>>> v1
 
 `./createUser.test.js`
 ```js
 import mock from 'mock4xhr';
 import createUser from './createUser';
 
+<<<<<<< HEAD
 describe('createUser()', () => {
+=======
+```javascript
+var mock = require('mock4xhr');
+>>>>>>> v1
 
   // replace the real XHR object with the mock XHR object before each test
   beforeEach(() => mock.setup());
@@ -94,7 +110,7 @@ Examples of using `mock4xhr` with various frameworks:
 
 ## API
 
-### xhr-mock
+### mock4xhr
 
 #### .setup()
 
@@ -228,6 +244,7 @@ xhr.setRequestHeader('Content-Type', '12');
 xhr.send('Hello World!');
 ```
 
+<<<<<<< HEAD
 #### Download progress
 
 Set the `Content-Length` header and send a body. `mock4xhr` will emit `ProgressEvent`s.
@@ -263,6 +280,9 @@ import mock from 'mock4xhr';
 mock.post('/', (req, res) => {
   return new Promise(() => {});
 });
+=======
+## ToDo
+>>>>>>> v1
 
 const xhr = new XMLHttpRequest();
 xhr.timeout = 100;
